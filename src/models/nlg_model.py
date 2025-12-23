@@ -8,7 +8,7 @@ class NLGModel:
     def summarize_text(self, text):
         response = openai.Completion.create(
             engine="text-davinci-003",
-            prompt=f"Summarize the following text:\n\n{text}",
+            prompt=f"Please summarize the following text:\n\n{text}",
             max_tokens=150,
             n=1,
             stop=None,
@@ -20,7 +20,7 @@ class NLGModel:
     def generate_script(self, summary):
         response = openai.Completion.create(
             engine="text-davinci-003",
-            prompt=f"Generate a video script based on the following summary:\n\n{summary}",
+            prompt=f"Create a video script based on the following summary:\n\n{summary}",
             max_tokens=300,
             n=1,
             stop=None,
